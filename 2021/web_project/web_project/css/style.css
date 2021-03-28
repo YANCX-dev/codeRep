@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: white;
-}
+
 .header{
     display: flex;
     margin: 0 0 0 10em;
@@ -33,20 +31,11 @@ body{
     margin: .5em 65%;
     font-size: 24px;
 }
-.under-head{
-display: flex;
-position: absolute;
-justify-content: center;
-max-width: 330px;
-min-height: 55px;
-border-radius: 20px;
-background-color: #1e796a;
-}
 .menu{
     display: flex;
     justify-content: space-around;
     margin: 2em 0 0 11.4em;
-    width: 1137px;
+    max-width: 1137px;
     min-height: 58px;
     border-radius: 5px;
     background-color: #5ED0BD;
@@ -80,7 +69,7 @@ background-color: #1e796a;
     /* border: solid 2px black; */
     width: 20em;
     height: 18em;
-    margin: 1em 0 0 2.3em;
+    margin: 1em auto 0 2vw;
     padding: 1em;
     background-color: #5ED0BD;
     justify-content: space-between;
