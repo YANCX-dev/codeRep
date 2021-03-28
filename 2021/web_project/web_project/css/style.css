@@ -69,7 +69,7 @@
     /* border: solid 2px black; */
     width: 20em;
     height: 18em;
-    margin: 0 0 0 2.7vw;
+    margin: 0 0 0 auto;
     padding: 1em;
     background-color: #5ED0BD;
     justify-content: space-between;
