@@ -5,7 +5,7 @@
 
 .header{
     display: flex;
-    margin: 0 0 0 10em;
+    margin: 0 auto;
     max-width: 1139px;
     max-height: 75px;
     background-color: #006957;
@@ -34,7 +34,7 @@
 .menu{
     display: flex;
     justify-content: space-around;
-    margin: 2em 0 0 11.4em;
+    margin: 2em auto;
     max-width: 1137px;
     min-height: 58px;
     border-radius: 5px;
@@ -69,7 +69,7 @@
     /* border: solid 2px black; */
     width: 20em;
     height: 18em;
-    margin: 1em auto 0 2vw;
+    margin: 0 0 0 2.7vw;
     padding: 1em;
     background-color: #5ED0BD;
     justify-content: space-between;
