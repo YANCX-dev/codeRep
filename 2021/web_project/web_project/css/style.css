@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 
 .header{
     display: flex;
@@ -32,34 +34,32 @@
     font-size: 24px;
 }
 .menu{
-    display: flex;
-    justify-content: space-around;
-    margin: 2em auto;
-    max-width: 1137px;
-    min-height: 58px;
-    border-radius: 5px;
-    background-color: #5ED0BD;
+    background-color:#5ED0BD;
+    border: 2px solid black;
+    width: 1137px;
+    height: 51px;
+    margin: 0 auto;
+    margin-top: 45px;
 }
-.menu__item{
+.menu__items{
     display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    margin-top: 0.5em;
-    max-height: 30px;
-    min-width: 252px;
-    border-radius: 0 0 5px 5px;
-    background-color: #FFFFFF;
-}
-.menu__item>a{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 18px;
-    color:black
 }
+.menu__items>li>a{
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
 .card-box{
-    /* border: black 2px solid; */
-    margin: 0.5em 0 0 9.4em;
-    max-width: 74em;
+    border: black 2px solid;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: 1137px;
     height: 43em;
     display: flex;
     flex-wrap: wrap;
@@ -68,9 +68,10 @@
 .card{
     /* border: solid 2px black; */
     width: 20em;
-    height: 18em;
-    margin: 0 0 0 auto;
+    height: 320px;
     padding: 1em;
+    margin: 0 auto;
+    margin-top: 20px;
     background-color: #5ED0BD;
     justify-content: space-between;
 }
@@ -85,33 +86,28 @@
 .card__address>p{
     margin-top: 0.4em;
 }
+.card__image >img{
+    margin: 10px auto;
+    margin-left: 4px;
+    /* border: 2px solid black; */
+    height: 190px;
+    width: 280px;
+    border-radius: 10px;
+}
 .card__button{
     display: flex;
     justify-content: center;
-    width: 10em;
-    height: 2em;
-    margin: 0 0 0 5.2em;
-    background-color: #FFFFFF;
-    border-radius: 5px 0px;
+    align-items: center;
 }
-.card__button>a{
-    padding: 0.2em;
-    font-size: 18px;
-    text-align: center;
-    width: 10em;
-    height: 1.7em;
+.card__button > a{
+    display: inline-block;
+    background-color: #fff;
     text-decoration: none;
     color: black;
+    font-size: 24px;
+    text-align: center;
+    width: 176px;
+    height: 37px;
+    padding-top: 5px;
+    border-radius: 15px 0 15px 0;
 }
-.card__image{
-    display: flex;
-    margin: 1em;
-    height: 12em;
-    width: 5em;
-}
-.card__image>img{
-    border-radius: 20px;
-}
-
-
-
