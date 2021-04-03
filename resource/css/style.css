@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1456px;
+    max-height: 75px;
+    background-color: #006957;
+    border-radius: 0 0 10px 10px;
+    justify-content: flex-end;
+}
+
+.header__item {
+    display: flex;
+    padding: 15px;
+    margin-top: .6em;
+}
+
+.header__item > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header_rubix_font {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+.webname {
+    margin: .5em 65%;
+    font-size: 24px;
+}
+
+.menu {
+    margin: 2em auto;
+    max-width: 1456px;
+    min-height: 58px;
+    border-radius: 5px;
+    background-color: #5ED0BD;
+    border: #5ED0BD 2px solid;
+}
+
+.card-box {
+    display: flex;
+    max-width: 1515px;;
+    min-height: 630px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card {
+    /* border: solid 2px black; */
+    width: 20em;
+    height: 18em;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #5ED0BD;
+
+}
+
+.card__address {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    min-width: 252px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.card__address > p {
+    margin-top: 0.4em;
+}
+
+.card__image {
+    display: flex;
+    padding-top: 10px;
+    height: 203px;
+    width: 5em;
+}
+
+.card__image > img {
+    border-radius: 20px;
+}
+
+.menu-main__items {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 15px;
+
+}
+
+.menu-main__items > li > a {
+    display: inline-block;
+    width: 170px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.card_btn {
+    display: inline-block;
+    left: 25%;
+    position: relative;
+    font-size: 21px;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_auth_block {
+    width: 480px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top:45px;
+    background: #5ED0BD;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.form_auth_block_content {
+    padding-top: 10%;
+}
+
+.form_auth_block_head_text {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 350px;
+    font-weight: 600;
+    background: #006957;
+    margin: 0 auto;
+    opacity: .9;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_auth_block label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background: #ffffff;
+    opacity: 0.7;
+    width: 300px;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.form_auth_block input {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    color: #000000;
+    border-radius: 10px;
+    border: 2px solid #436fea;
+}
+
+.form_auth_button {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+::-webkit-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+
+/*Это стили для placeholder*/
+::-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+/*Это стили для placeholder*/
+:-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+
+/*Это стили для placeholder*/
+:-ms-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+/*Это стили для placeholder*/
