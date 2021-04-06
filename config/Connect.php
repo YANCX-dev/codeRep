@@ -10,7 +10,7 @@ class Connect
     {
 
         return new PDO(
-            "mysqhl:host=" . $conn["host"] . ";dbname=" . $conn["dbname"],
+            "mysql:host=" . $conn["host"] . ";dbname=" . $conn["dbname"],
             $conn["login"],
             $conn["password"]);
     }

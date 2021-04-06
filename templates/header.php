@@ -13,6 +13,6 @@
     <!-- Хедер -->
     <div class="header header_rubix_font">
         <div class="header__item webname"><a href="/index.php">REALTY</a></div>
-        <div class="header__item"><a href="#">Регистрация</a></div>
-        <div class="header__item"><a href="/routes/auth/index.view.php">Авторизация</a></div>
+        <div class="header__item"><a href="/routes/register/index.php">Регистрация</a></div>
+        <div class="header__item"><a href="/routes/auth/index.php">Авторизация</a></div>
     </div>

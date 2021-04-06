@@ -127,7 +127,7 @@
     width: 480px;
     height: 420px;
     margin: 0 auto;
-    margin-top:45px;
+    margin-top: 45px;
     background: #5ED0BD;
     background-size: cover;
     border-radius: 20px;
@@ -193,6 +193,99 @@ input:focus {
     font-size: 18px;
 }
 
+.form_reg_block {
+    width: 480px;
+    height: 485px;
+    margin: 0 auto;
+    margin-top: 45px;
+    background: #5ED0BD;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.form_reg_block_content {
+    padding-top: 5%;
+}
+
+.form_reg_block_head_text {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 350px;
+    font-weight: 600;
+    background: #006957;
+    margin: 0 auto;
+    opacity: .9;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_reg_block label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background: #ffffff;
+    opacity: 0.7;
+    width: 300px;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.form_reg_block input {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.form_reg_button {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.first-circle{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: 64px;
+    top: 20%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
+.second-circle{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    left: 650px;
+    top: 45%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
+.third-circle{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 70%;
+    top: 20%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
 ::-webkit-input-placeholder {
     color: #3f3f44;
     padding-left: 10px;

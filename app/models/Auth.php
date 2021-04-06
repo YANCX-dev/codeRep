@@ -8,15 +8,15 @@ class Auth
 {
     private $pdo;
 
-    public function __construct()
+    public function __construct($pdo)
     {
-        $this->pdo;
+        $this->pdo = $pdo;
     }
 
-    public function auth($login,$password){
-        $stmt = $this->pdo->prepare("SELECT * FROM admins WHERE login=:login");
+    public function auth($email,$password){
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email=:email");
         $stmt->execute([
-           "login"=>$login
+           "email"=>$email
         ]);
         $user=$stmt->fetch();
         if($user){
@@ -27,4 +27,18 @@ class Auth
         return false;
 
     }
+    public function register($email,$login,$password){
+        if($this->auth($login,$password)){
+            return -1;
+        }
+        $stmt = $this->pdo->prepare("INSERT INTO users (email, login, password) values(:email,:login,:password)");
+
+        $stmt->execute([
+           "email"=>$email,
+           "login"=>$login,
+           "password"=>password_hash($password,PASSWORD_DEFAULT),
+        ]);
+        return $this->pdo->lastInsertId();
+    }
+
 }
