@@ -1,0 +1,1 @@
+<?php require $_SERVER["DOCUMENT_ROOT"] . "/routes/open_card/index.view.php";

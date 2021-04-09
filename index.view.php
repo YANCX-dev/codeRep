@@ -35,56 +35,56 @@
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
         <div class="card">
             <div class="card__address">
                 <p>SomeAddress</p>
             </div>
             <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="#">Посмотреть</a>
+            <a class="card_btn" href="/routes/open_card/index.php">Посмотреть</a>
         </div>
 
     </div>

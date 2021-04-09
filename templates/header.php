@@ -7,12 +7,10 @@
     <title>Сoursework</title>
     <link rel="stylesheet" href="/resource/css/style.css">
 </head>
-
 <body>
 <div class="wrapper">
-    <!-- Хедер -->
     <div class="header header_rubix_font">
-        <div class="header__item webname"><a href="/index.php">REALTY</a></div>
-        <div class="header__item"><a href="/routes/register/index.php">Регистрация</a></div>
-        <div class="header__item"><a href="/routes/auth/index.php">Авторизация</a></div>
+        <div class="header__item webname"><a href="/">REALTY</a></div>
+        <div class="header__item"><a href="/routes/register/">Регистрация</a></div>
+        <div class="header__item"><a href="/routes/auth/">"Авторизация"</a></div>
     </div>
