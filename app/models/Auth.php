@@ -30,10 +30,15 @@ class Auth
 
     public function register($email, $login, $password)
     {
-        if($this->auth($login,$password)){
-            return $login;
+        $cheklogin = $this->pdo->prepare("SELECT * FROM `users` WHERE `login` = ?");
+        $cheklogin->execute(array($login));
+        while ($row = $cheklogin->fetch(PDO::FETCH_LAZY)) {
+            if ($row > 0) {
+                $_SESSION["errors"]["register"] = "Логин занят";
+//                return -1;
+            }
         }
-        else{
+        if ($row == 0) {
             $stmt = $this->pdo->prepare("INSERT INTO users (email, login, password) values(:email,:login,:password)");
 
             $stmt->execute([
@@ -43,10 +48,11 @@ class Auth
             ]);
             return $this->pdo->lastInsertId();
         }
-
+        return 1; //Тут хз поч я 1 вернул,просто требует ретерна я а не ебу что тут ретернить сука блять 
     }
 
-    public function find($login)
+    public
+    function find($login)
     {
         $stmt = $this->pdo->prepare("SELECT * FROM users WHERE login=:login");
         $stmt->execute([
