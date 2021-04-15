@@ -996,136 +996,137 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="309" parent="290" name="price">
+    <column id="309" parent="290" name="apartment_number">
       <Position>4</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="310" parent="290" name="status">
+    <column id="310" parent="290" name="price">
       <Position>5</Position>
-      <DataType>tinyint(1)|0s</DataType>
+      <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="311" parent="290" name="house_id">
+    <column id="311" parent="290" name="status">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <index id="312" parent="290" name="house_id">
       <ColNames>house_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="312" parent="290" name="PRIMARY">
+    <key id="313" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="313" parent="290" name="flat_ibfk_1">
+    <foreign-key id="314" parent="290" name="flat_ibfk_1">
       <ColNames>house_id</ColNames>
       <RefTableName>house</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="314" parent="291" name="flat_id">
+    <column id="315" parent="291" name="flat_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="315" parent="291" name="element_id">
+    <column id="316" parent="291" name="element_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="316" parent="291" name="square">
+    <column id="317" parent="291" name="square">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="317" parent="291" name="flat_id">
+    <index id="318" parent="291" name="flat_id">
       <ColNames>flat_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="318" parent="291" name="element_id">
+    <index id="319" parent="291" name="element_id">
       <ColNames>element_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="319" parent="291" name="flat_structure_ibfk_2">
+    <foreign-key id="320" parent="291" name="flat_structure_ibfk_2">
       <ColNames>flat_id</ColNames>
       <RefTableName>flat</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="320" parent="291" name="flat_structure_ibfk_1">
+    <foreign-key id="321" parent="291" name="flat_structure_ibfk_1">
       <ColNames>element_id</ColNames>
       <RefTableName>elements</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="321" parent="292" name="id">
+    <column id="322" parent="292" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="322" parent="292" name="street_id">
+    <column id="323" parent="292" name="street_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="323" parent="292" name="house_number">
+    <column id="324" parent="292" name="house_number">
       <Position>3</Position>
       <DataType>varchar(65)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="324" parent="292" name="type_id">
+    <column id="325" parent="292" name="type_id">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="325" parent="292" name="street_id">
+    <index id="326" parent="292" name="street_id">
       <ColNames>street_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="326" parent="292" name="type_id">
+    <index id="327" parent="292" name="type_id">
       <ColNames>type_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="327" parent="292" name="PRIMARY">
+    <key id="328" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="328" parent="292" name="house_ibfk_1">
+    <foreign-key id="329" parent="292" name="house_ibfk_1">
       <ColNames>street_id</ColNames>
       <RefTableName>street</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="329" parent="292" name="house_ibfk_2">
+    <foreign-key id="330" parent="292" name="house_ibfk_2">
       <ColNames>type_id</ColNames>
       <RefTableName>house_type</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="330" parent="293" name="id">
+    <column id="331" parent="293" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="331" parent="293" name="floor">
+    <column id="332" parent="293" name="floor">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="332" parent="293" name="elevator">
+    <column id="333" parent="293" name="elevator">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="333" parent="293" name="district">
-      <Position>4</Position>
-      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="334" parent="293" name="PRIMARY">
@@ -1251,7 +1252,7 @@ flat_id</ColNames>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="357" parent="297" name="district_id">
+    <index id="357" parent="297" name="street_ibfk_1">
       <ColNames>district_id</ColNames>
       <Type>btree</Type>
     </index>

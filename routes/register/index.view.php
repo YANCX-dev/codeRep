@@ -1,3 +1,4 @@
+<?php //session_start();?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -23,6 +24,14 @@
                 <input type="password" name="reg_pass" placeholder="Введите пароль" required>
                 <button class="form_reg_button" type="submit" name="form_reg_submit">Зарегестрироваться</button>
             </form>
+            <?php
+            if(!empty($errors)):?>
+               <div class="errors">
+                   <p class="form-error"> <?=$errors?></p>
+               </div>
+                <?php endif?>
+
+
         </div>
     </div>
 </div>

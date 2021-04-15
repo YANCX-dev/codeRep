@@ -344,12 +344,14 @@ input:focus {
     display: flex;
     margin-left: 45px;
     margin-top: 45px;
+    justify-content: center;
 }
 
 .admin-form-elements{
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 600px;
     justify-content: center;
     border: 3px solid rgba(0,0,0,0.6) ;
     padding: 10px;
@@ -357,12 +359,30 @@ input:focus {
     backdrop-filter: blur(6px);
     border-radius: 10px;
 }
-.admin-form-elements>input{
-    width: 300px;
+.admin-form-elements>input,select,textarea{
+    width: 500px;
+    margin: 0 auto;
     font-size: 13px;
     padding: 6px 0 4px 10px;
     border: 1px solid #cecece;
     background: #F6F6f6;
     border-radius: 8px;
     outline: none;
+}
+.admin-form-elements>textarea{
+    max-width:500px ;
+}
+.errors{
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    border-radius: 5px 0px 5px 0px;
+    background: #006957;
+}
+.form-error{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;;
+    text-align: center;
+    color: white;
 }
