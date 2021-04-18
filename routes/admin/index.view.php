@@ -31,7 +31,7 @@
             </p>
             <div class="elevator">
                 <label for="elevator">Да</label>
-            <input type="checkbox" name="elevator" value="1" required/>
+            <input type="checkbox" name="elevator" value="1"/>
                 <label for="elevator">Нет</label>
             <input type="checkbox" name="elevator" value="0" />
             </div>

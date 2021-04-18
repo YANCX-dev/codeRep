@@ -11,6 +11,6 @@
 <div class="wrapper">
     <div class="header header_rubix_font">
         <div class="header__item webname"><a href="/">REALTY</a></div>
-        <div class="header__item"><a href="/routes/register/">Регистрация</a></div>
-        <div class="header__item"><a href="/routes/auth/">"Авторизация"</a></div>
+        <div class="header__item"><a href="/routes/register/"><?=isset($_SESSION["auth"])? "":"Регистрация"?></a></div>
+        <div class="header__item"><a href="/routes/auth/?out=true"><?=isset($_SESSION["auth"]) ? "Выход": "Авторизация"?></a></div>
     </div>

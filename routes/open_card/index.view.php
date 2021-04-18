@@ -4,10 +4,9 @@
 <div class="card-openbox">
     <div class="card-openbox__img"><img src="/resource/img/flat1.jpg" alt="flat"></div>
     <div class="card-openbox__descr">
-        <h1 class="card-openbox-title">Заголовок карточки</h1>
-        <p class="card-openbox-text">Текс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточкиТекс карточки</p>
+        <h1 class="card-openbox-title"><?=$card->street_name?></h1>
+        <p class="card-openbox-text"><?=$card->descr?></p>
     </div>
 </div>
-
 </body>
 </html>
