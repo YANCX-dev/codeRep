@@ -7,7 +7,15 @@
             <p class="admin-form__text">
                 Добавьте район
             </p>
-            <input type="text" name="district" required/>
+<!--            <input type="text" name="district" required/>-->
+            <select name="district" required>
+                <option value="1">Калининский район</option>
+                <option value="2">Курчатовский район</option>
+                <option value="3">Ленинский район</option>
+                <option value="4">Металлургический район</option>
+                <option value="5">Советский район</option>
+                <option value="6">Центральный район</option>
+            </select>
             <p class="admin-form__text">
                 Добавьте улицу
             </p>

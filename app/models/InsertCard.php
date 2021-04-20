@@ -91,9 +91,13 @@ WHERE f.id = :id");
         ]);
         return $openCard->fetch();
     }
-    public function getFlatId(){
-        $flatId = $this->pdo->query("SELECT * FROM flat");
+    public function getImage($id){
+        $getImage = $this->pdo->prepare("SELECT * FROM images WHERE flat_id=:id");
 
-        return $flatId->fetch();
+        $getImage->execute([
+            "id"=>$id
+        ]);
+
+       return $getImage->fetchAll();
     }
 }

@@ -2,7 +2,8 @@
 
 $card = $dataCard->openCard($_GET["id"]);
 
-
+$cardImage = $dataCard->getImage($_GET["id"]);
+var_dump($cardImage);
 
 
 
