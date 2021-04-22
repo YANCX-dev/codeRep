@@ -1,11 +1,12 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/bootstrap.php"?>
+<?php include $_SERVER["DOCUMENT_ROOT"]."/templates/background.php"?>
     <!-- Хедер -->
     <!-- Меню -->
     <div class="menu">
         <ul class="menu-main__items">
             <li><a href="#">Покупка</a></li>
-            <li><a href="#">Продажа</a></li>
+            <li><a href="/routes/admin/index.php">Продажа</a></li>
             <li><a href="#">Новостройки</a></li>
         </ul>
     </div>

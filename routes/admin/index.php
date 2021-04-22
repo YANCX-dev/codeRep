@@ -20,7 +20,6 @@ if (isset($_POST['submit_form'])) {
             }
             else{
                 if (in_array($type, $validFileTypes)) {
-                    var_dump($_POST["house_type"]);
                     $dataCard->insertCard($_POST["district"],$_POST["street"],$_POST["house"],$_POST["house_type"],$_POST["elevator"],$_POST["floor_number"],$_POST["number_flat"],$_POST["flat_price"],$_POST["flat_descr"],time().$name,$uploadDir);
                     if (!move_uploaded_file($tmpName, $uploadDir . time().$name)) {
                         $errors = "Не удалось загрузить изображение";

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сoursework</title>
     <link rel="stylesheet" href="/resource/css/style.css">
+    <script src="/resource/js/script.js"></script>
 </head>
 <body>
 <div class="wrapper">
