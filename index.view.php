@@ -17,8 +17,8 @@
             <div class="card__address">
                 <p><?=$v->street_name?></p>
             </div>
-            <div class="card__image"><img src="/resource/img/flat1.jpg" alt="Квартира"></div>
-            <a class="card_btn" href="/routes/open_card/index.php?id=<?=$v->id?>">Посмотреть</a>
+            <div class="card__image"><img src="/resource/img/<?=$v->image_name?>" alt="Квартира"></div>
+            <a class="card_btn" href="/routes/open_card/index.php?id=<?=$v->flat_id?>">Посмотреть</a>
         </div>
         <?php endforeach;?>
     </div>

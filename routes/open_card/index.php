@@ -1,9 +1,10 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/bootstrap.php";
 
-$card = $dataCard->openCard($_GET["id"]);
-
-$cardImage = $dataCard->getImage($_GET["id"]);
-var_dump($cardImage);
+//$card = $dataCard->openCard($_GET["id"]);
+//
+//$cardImage = $dataCard->openCard($_GET["id"]);
+$openCard = $dataCard->openCard($_GET["id"]);
+//var_dump($openCard);
 
 
 

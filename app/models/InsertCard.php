@@ -72,7 +72,7 @@ class InsertCard
     public function getCardInfo()
     {
 
-        $cardAddres = $this->pdo->query("SELECT * FROM flat f INNER JOIN house h ON f.house_id = h.id INNER JOIN street s on h.street_id = s.id");
+        $cardAddres = $this->pdo->query("SELECT * FROM flat f INNER JOIN house h ON f.house_id = h.id INNER JOIN street s on h.street_id = s.id INNER JOIN images i on f.id = i.flat_id");
 
         return $cardAddres->fetchAll();
 
@@ -82,22 +82,23 @@ class InsertCard
 
     public function openCard($id)
     {
-        $openCard = $this->pdo->prepare("SELECT *
-FROM flat f INNER JOIN house h ON f.house_id = h.id INNER JOIN house_type ht on h.type_id = ht.id INNER JOIN street s on h.street_id = s.id
-WHERE f.id = :id");
+//        $openCard = $this->pdo->prepare("SELECT *
+//FROM flat f INNER JOIN house h ON f.house_id = h.id INNER JOIN house_type ht on h.type_id = ht.id INNER JOIN street s on h.street_id = s.id INNER JOIN images i on f.id = i.flat_id
+//WHERE f.id =:id");
+        $openCard = $this->pdo->prepare("SELECT * FROM flat f INNER JOIN house h ON f.house_id = h.id INNER JOIN street s on h.street_id = s.id INNER JOIN images i on f.id = i.flat_id WHERE flat_id =:id");
 
         $openCard->execute([
             "id" => $id,
         ]);
         return $openCard->fetch();
     }
-    public function getImage($id){
-        $getImage = $this->pdo->prepare("SELECT * FROM images WHERE flat_id=:id");
-
-        $getImage->execute([
-            "id"=>$id
-        ]);
-
-       return $getImage->fetchAll();
-    }
+//    public function getImage($id){
+//        $getImage = $this->pdo->prepare("SELECT * FROM images WHERE flat_id=:id");
+//
+//        $getImage->execute([
+//            "id"=>$id
+//        ]);
+//
+//       return $getImage->fetchAll();
+//    }
 }
