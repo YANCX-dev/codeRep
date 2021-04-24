@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1456px;
+    max-height: 75px;
+    background-color: #006957;
+    border-radius: 0 0 10px 10px;
+    justify-content: flex-end;
+}
+
+.header__item {
+    display: flex;
+    padding: 15px;
+    margin-top: .6em;
+}
+
+.header__item > a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header_rubix_font {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+
+.webname {
+    margin: .5em 65%;
+    font-size: 24px;
+}
+
+.menu {
+    margin: 2em auto;
+    max-width: 1456px;
+    min-height: 58px;
+    border-radius: 5px;
+    background-color: #5ED0BD;
+    border: #5ED0BD 2px solid;
+}
+
+.card-box {
+    display: flex;
+    max-width: 1515px;;
+    min-height: 630px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card {
+    /* border: solid 2px black; */
+    width: 20em;
+    height: 18em;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #5ED0BD;
+
+}
+
+.card__address {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    min-width: 252px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.card__address > p {
+    margin-top: 0.4em;
+}
+
+.card__image {
+    display: flex;
+    padding-top: 5px;
+    height: 200px;
+    width: 100%;
+}
+
+.card__image > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.menu-main__items {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 15px;
+
+}
+.menu-main__items>li{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-main__items > li > a {
+    display: inline-block;
+    width: 170px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+.card_btn {
+    display: inline-block;
+    left: 25%;
+    position: relative;
+    font-size: 21px;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    background-color: #FFFFFF;
+    text-align: center;
+    margin-top: 5px;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_auth_block {
+    width: 480px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 45px;
+    background: #5ED0BD;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.form_auth_block_content {
+    padding-top: 10%;
+}
+
+.form_auth_block_head_text {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 350px;
+    font-weight: 600;
+    background: #006957;
+    margin: 0 auto;
+    opacity: .9;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_auth_block label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background: #ffffff;
+    opacity: 0.7;
+    width: 300px;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.form_auth_block input {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    color: #000000;
+    border-radius: 10px;
+    border: 2px solid #436fea;
+}
+
+.form_auth_button {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form_reg_block {
+    width: 480px;
+    height: 485px;
+    margin: 0 auto;
+    margin-top: 45px;
+    background: rgb(94,208,189);
+    background-size: cover;
+    border-radius: 20px;
+}
+
+
+.form_reg_block_content {
+    padding-top: 5%;
+}
+
+.form_reg_block_head_text {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 350px;
+    font-weight: 600;
+    background: #006957;
+    margin: 0 auto;
+    opacity: .9;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_reg_block label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    background: #ffffff;
+    opacity: 0.7;
+    width: 300px;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.form_reg_block input {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.form_reg_button {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.first-circle{
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    left: 64px;
+    top: 20%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
+.second-circle{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    left: 650px;
+    top: 45%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
+.third-circle{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 70%;
+    top: 20%;
+    background-color: rgba(0,162,135,0.3);
+    border-radius: 100%;
+    z-index: -10000;
+}
+::-webkit-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+
+/*Это стили для placeholder*/
+::-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+/*Это стили для placeholder*/
+:-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+
+/*Это стили для placeholder*/
+:-ms-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+.card-openbox{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 100px;
+    /*border: 3px solid black;*/
+    max-width: 1450px;
+    height: 440px;
+}
+.card-openbox__img>img{
+    border-radius: 10px;
+    height: 500px;
+    width: 690px;;
+}
+.card-openbox__descr{
+    /*border: 3px solid red;*/
+    width: 50%;
+    margin-left: auto;
+    height: 440px;
+}
+.card-openbox-title{
+    background: rgba(96, 222, 183,.5);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+.card-openbox-inf{
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(94,208,189,0.6);
+    border-radius: 10px;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+}
+.card-openbox-descr{
+    display: flex;
+    margin-top: 50px;
+    padding:5px;
+    background: rgba(94,208,189,0.6);
+    border-radius: 10px;
+    min-height: 300px;
+    justify-content: center;
+}
+.admin-form{
+    display: flex;
+    margin-left: 45px;
+    margin-top: 45px;
+    justify-content: center;
+}
+.card-openbox-descr-bg{
+    width: 98%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.8);
+}
+.admin-form-elements{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 600px;
+    justify-content: center;
+    border: 3px solid rgba(0,0,0,0.6) ;
+    padding: 10px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+}
+.admin-form-elements>input,select,textarea{
+    width: 500px;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    outline: none;
+}
+.admin-form-elements>textarea{
+    max-width:500px ;
+}
+.errors{
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    border-radius: 5px 0px 5px 0px;
+    background: #006957;
+}
+.form-error{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;;
+    text-align: center;
+    color: white;
+}
+
+.card-openbox-price{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 30px;
+    background-color: #fff;
+    min-width: 200px;
+    height: 30px;
+    align-items: center;
+}
+.card-openbox-district{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 30px;
+    background-color: #fff;
+    min-width: 200px;
+    height: 30px;
+    align-items: center;
+}
+.scattering {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: url(http://zornet.ru/ABVUN/Aba/detunis/supasnab/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+}
+.scattering:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -2800px 0;
+    }
+}
