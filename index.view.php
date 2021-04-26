@@ -1,5 +1,6 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/bootstrap.php"?>
+<?php var_dump($flats);?>
 <!-- Хедер -->
 <!-- Меню -->
 <div class="menu">

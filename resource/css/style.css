@@ -174,7 +174,7 @@
 .form_auth_block input {
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     height: 35px;
     border-radius: 10px;
     border: none;
@@ -375,20 +375,23 @@ input:focus {
     border-radius: 10px;
     background: rgba(255,255,255,0.8);
 }
+label{
+    font-size: 18px;
+}
 .admin-form-elements{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 600px;
+    width: 1000px;
     justify-content: center;
-    border: 3px solid rgba(0,0,0,0.6) ;
+    border: 3px rgba(101, 205, 143,0.6) solid;
     padding: 10px;
     background: rgba(255,255,255,0.6);
     backdrop-filter: blur(6px);
     border-radius: 10px;
 }
 .admin-form-elements>input,select,textarea{
-    width: 500px;
+    width: 90%;
     margin: 0 auto;
     font-size: 13px;
     padding: 6px 0 4px 10px;
@@ -396,16 +399,45 @@ input:focus {
     background: #F6F6f6;
     border-radius: 8px;
     outline: none;
+    background: rgba(51, 133, 128,0.2);
+}
+.admin-form-elements>input{
+    width: 90%;
+    height: 35px;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(51, 133, 128,0.2);
+    font-size: 18px;
 }
 .admin-form-elements>textarea{
-    max-width:500px ;
+    max-width:90%;
+
 }
+.admin-form-elements>p{
+   font-size: 18px;
+}
+
 .errors{
     margin: 0 auto;
     width: 80%;
     height: 50%;
     border-radius: 5px 0px 5px 0px;
     background: #006957;
+}
+.flat_structure{
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+    flex-direction: column;
+    border: rgba(101, 205, 143,0.6) solid;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 5px;
 }
 .form-error{
     margin-top: 10px;

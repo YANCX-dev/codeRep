@@ -1,5 +1,5 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
-<?php include $_SERVER["DOCUMENT_ROOT"]."/templates/background.php"?>
+<?php include $_SERVER["DOCUMENT_ROOT"] . "/templates/background.php" ?>
 <div class="admin-form">
     <form action="/routes/admin/index.php" method="post" enctype="multipart/form-data">
         <div class="admin-form-elements">
@@ -27,20 +27,20 @@
                 Выберите тип дома
             </p>
             <select name="house_type">
-                <option value="1">Сталинка</option>
-                <option value="2">Хрущевка</option>
-                <option value="3">Брежневка</option>
-                <option value="4">Студия</option>
-                <option value="5">Стандарт</option>
+                <option value="Сталинка">Сталинка</option>
+                <option value="Хрущевка">Хрущевка</option>
+                <option value="Брежневка">Брежневка</option>
+                <option value="Студия">Студия</option>
+                <option value="Стандарт">Стандарт</option>
             </select>
             <p class="admin-form__text">
                 Наличие лифта?
             </p>
             <div class="elevator">
                 <label for="elevator">Да</label>
-                <input type="checkbox" name="elevator" value="1"/>
+                <input type="radio" name="elevator" value="1"/>
                 <label for="elevator">Нет</label>
-                <input type="checkbox" name="elevator" value="0" />
+                <input type="radio" name="elevator" value="0"/>
             </div>
             <p class="admin-form__text">
                 Укажите этаж
@@ -50,7 +50,25 @@
                 Добавьте номер квартиры
             </p>
             <input type="text" name="number_flat" required/>
-
+            <p>Состав квартиры</p>
+            <div class="flat_structure">
+                <label for="flat_structure">Зал</label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Livingroom"/>
+                <label for="flat_structure">Спальная комната</label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Bedroom"/>
+                <label for="flat_structure">Кухня</label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Kitchen"/>
+                <label for="flat_structure">Ванная комната></label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Bathroom"/>
+                <label for="flat_structure">Лоджия</label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Loggia"/>
+                <label for="flat_structure">Балкон</label>
+                <input class="checkbox-flat-structure" type="checkbox" name="flat_structure[]" value="Balcony"/>
+            </div>
+            <p class="admin-form__text">
+                Укажите площадь квартиры
+            </p>
+            <input type="number" name="flat_square" required/>
             <p class="admin-form__text">
                 Укажите стоимость квартиры
             </p>
@@ -58,7 +76,7 @@
             <p class="admin-form__text">
                 Описание:
             </p>
-            <textarea wrap="hard" name="flat_descr"  cols="30" rows="10"></textarea>
+            <textarea wrap="hard" name="flat_descr" cols="30" rows="10"></textarea>
             <p class="admin-form__text">
                 Добавьте изображения
             </p>
