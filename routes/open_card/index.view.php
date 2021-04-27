@@ -1,7 +1,6 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/templates/background.php"?>
 <div class="card-openbox">
-    <div class="scattering"></div>
     <section id="slider_bl">
         <div class="wrapper1">
             <input checked type=radio name="slider" id="slide1" />
@@ -37,8 +36,23 @@
         <div class="card-openbox-inf">
             <p class="card-openbox-price">Цена:<?=$flat->price?></p>
             <p class="card-openbox-district">Район:<?=$flat->district_name?></p>
+            <p class="card-openbox-district">Тип:<?=$flat->type?></p>
         </div>
-        <div class="card-openbox-descr"><div class="card-openbox-descr-bg"><p><?=$flat->descr?></p></div></div>
+        <div class="card-openbox-descr">
+            <div class="card-openbox-descr-bg"><p><?=$flat->descr?></p></div>
+            <div class="card-openbox-descr-bg el-align">
+                <p style="font-size: 20px">Состав квартиры:</p>
+                <?for ($i=0;$i<count($flatEl);$i++):?>
+                    <p><?=$flatEl[$i]->element_name?></p>
+                <?php endfor;?>
+            </div>
+        </div>
+        <div class="btn-create-request">
+            <form method="post" action="/routes/request/index.php">
+                <input hidden value="<?=$flat->id?>" name="flat_id">
+                <input type="submit" class="glo" value="Оставить заявку" name="order-submit">
+            </form>
+        </div>
     </div>
 </div>
 

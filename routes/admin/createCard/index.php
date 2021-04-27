@@ -1,6 +1,5 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/bootstrap.php";
-var_dump($_POST);
 //$flatEl=[
 //    "Livingroom"=>"Зал",
 //    "Bedroom"=>"Спальная комната",
@@ -44,10 +43,10 @@ if ($_SESSION["auth"] == false) {
             finfo_close($fileInfo);
         }
         //Пока закоментил чтобы посмотреть какого фига форма не работает вообще
-//        $dataCard->insertCard($_POST["district"], $_POST["street"], $_POST["house"],
-//            $_POST["house_type"], $_POST["elevator"], $_POST["floor_number"],
-//            $_POST["number_flat"], $_POST["flat_price"], $_POST["flat_descr"],$imageNames,$_POST["flat_square"]);
-
+        $dataCard->insertCard($_POST["district"], $_POST["street"], $_POST["house"],
+            $_POST["house_type"], $_POST["elevator"], $_POST["floor_number"],
+            $_POST["number_flat"], $_POST["flat_price"], $_POST["flat_descr"],$imageNames,$_POST["flat_structure"],$_POST["flat_square"]);
+        header("Location:/");
     }
 }
 
