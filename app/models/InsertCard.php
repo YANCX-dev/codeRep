@@ -149,6 +149,7 @@ class InsertCard
 
     }
 
+
 //    public function getImage($id){
 //        $getImage = $this->pdo->prepare("SELECT * FROM images WHERE flat_id=:id");
 //

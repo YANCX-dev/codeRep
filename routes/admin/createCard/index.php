@@ -18,7 +18,6 @@ $uploadDir = $_SERVER["DOCUMENT_ROOT"] . "/resource/img/";
 if ($_SESSION["auth"] == false) {
     header("Location:/routes/register/index.php");
 } else {
-
     if (isset($_POST['submit_form'])) {
         foreach ($_FILES['loadImg']['error'] as $key => $error) {
             $name = time() . $_FILES['loadImg']['name'][$key];
@@ -29,7 +28,7 @@ if ($_SESSION["auth"] == false) {
             $type = finfo_file($fileInfo, $tmpName);
             if ($error == UPLOAD_ERR_OK) {
                 if ($_FILES["loadImg"]["size"][$key] > $maxSize) {
-                    $errors = "Ошибка загрузки файла!Файл слишком большой!";
+                    $errors = "Ошибка загрузки файлов!Файл слишком большой!";
                 } else {
                     if (in_array($type, $validFileTypes)) {
                         if (!move_uploaded_file($tmpName, $uploadDir . $name)) {
@@ -38,15 +37,22 @@ if ($_SESSION["auth"] == false) {
                             $errors = "Расширение файла должно быть PNG или JPEG";
                         }
                     }
+
                 }
             }
             finfo_close($fileInfo);
         }
-        //Пока закоментил чтобы посмотреть какого фига форма не работает вообще
-        $dataCard->insertCard($_POST["district"], $_POST["street"], $_POST["house"],
-            $_POST["house_type"], $_POST["elevator"], $_POST["floor_number"],
-            $_POST["number_flat"], $_POST["flat_price"], $_POST["flat_descr"],$imageNames,$_POST["flat_structure"],$_POST["flat_square"]);
-        header("Location:/");
+        if($filecount < 4){
+        $errors = "Ошибка загрузки файлов!Минимальное количество файлов - 4!";
+         }
+        else{
+            $dataCard->insertCard($_POST["district"], $_POST["street"], $_POST["house"],
+                $_POST["house_type"], $_POST["elevator"], $_POST["floor_number"],
+                $_POST["number_flat"], $_POST["flat_price"], $_POST["flat_descr"], $imageNames, $_POST["flat_structure"], $_POST["flat_square"]);
+            header("Location:/");
+        }
+
+
     }
 }
 

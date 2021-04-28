@@ -13,13 +13,14 @@ class RequestForm
         $this->pdo=$pdo;
     }
 
-    public function sendRequest($flat_id,$full_name,$phone,$email){
-        $stmt = $this->pdo->prepare("INSERT INTO request (full_name, phone, email) values (:full_name,:phone,:email)");
+    public function sendRequest($flat_id,$full_name,$phone,$email,$suggestions){
+        $stmt = $this->pdo->prepare("INSERT INTO request (full_name, phone, email,suggestions) values (:full_name,:phone,:email,:suggestions)");
 
         $stmt->execute([
             ":full_name"=>$full_name,
             ":phone"=>$phone,
             ":email"=>$email,
+            ":suggestions"=>$suggestions,
         ]);
 
         $order_id = $this->pdo->lastInsertId();

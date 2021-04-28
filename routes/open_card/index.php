@@ -3,6 +3,7 @@
 $flat = $dataCard->showFlat($_GET["id"]);
 $imagesForFlat = $dataCard->getFlatImages($_GET["id"]);
 $flatEl = $dataCard->getFlatElement($_GET["id"]);
+$flatSquare = $dataCard;
 
 $styles = ["top-left", "bottom-right", "bottom-left", "top-right"];
 

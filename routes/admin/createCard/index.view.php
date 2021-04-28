@@ -1,7 +1,8 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
 <?php include $_SERVER["DOCUMENT_ROOT"] . "/templates/background.php" ?>
+<div><p class="error-case"><?=$errors?></p></div>
 <div class="admin-form">
-    <form action="/routes/admin/createCard/index.php" method="post" enctype="multipart/form-data">
+    <form action="/routes/admin/createCard/index.php" class="createCard" method="post" enctype="multipart/form-data">
         <div class="admin-form-elements">
             <p class="admin-form__text">
                 Добавьте район

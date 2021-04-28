@@ -4,7 +4,7 @@
 if ($_SESSION["auth"] == false) {
     header("Location:/routes/register/index.php");
 } else {
-    var_dump($_POST);
+
     if (isset($_POST["flat_id"])) {
         $_SESSION['flat_id'] = $_POST["flat_id"];
     }
@@ -13,11 +13,14 @@ if ($_SESSION["auth"] == false) {
         $fullname = $_POST["user-fullname"];
         $userphone = $_POST["user-phone"];
         $useremail = $_POST["user-email"];
+        $suggestions = $_POST["user-suggest"];
         echo "*************";
         var_dump($_POST);
         echo "--------------";
         if(isset($_SESSION['flat_id'])){
-            $send = $sendRequest->sendRequest($_SESSION['flat_id'], $fullname, $userphone, $useremail);
+            $send = $sendRequest->sendRequest($_SESSION['flat_id'], $fullname, $userphone, $useremail,$suggestions);
+            header("Location:./routes/  ");
+            unset($_SESSION["flat_id"]);
         }
 
     }

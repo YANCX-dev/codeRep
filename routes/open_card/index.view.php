@@ -45,6 +45,7 @@
                 <?for ($i=0;$i<count($flatEl);$i++):?>
                     <p><?=$flatEl[$i]->element_name?></p>
                 <?php endfor;?>
+                <p class="flat-square">Площадь квартиры:<?=$flat->square?></p>
             </div>
         </div>
         <div class="btn-create-request">
