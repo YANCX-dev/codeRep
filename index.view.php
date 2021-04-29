@@ -5,7 +5,7 @@
 <div class="menu">
     <ul class="menu-main__items">
         <li><a href="#">Покупка</a></li>
-        <li><a href="/routes/admin/index.php">Продажа</a></li>
+        <li><a href="#">Продажа</a></li>
         <li><a href="#">Новостройки</a></li>
     </ul>
 </div>

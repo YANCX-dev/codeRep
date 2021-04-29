@@ -216,7 +216,44 @@ html{
     color: black;
     text-decoration: none;
 }
+.arrow-left{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.arrow-left>span>a{
+    padding: 50px;
+}
+.arrow-left span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid #00ff9a;
+    border-left: 3px solid #00ff9a;
 
+    margin: -2px;
+    animation: arrow-left 1s infinite;
+    float: left;
+}
+
+.arrow-left span:nth-child(2){
+    animation-delay: -0.1s;
+}
+.arrow-left span:nth-child(3){
+    animation-delay: -0.2s;
+}
+@keyframes arrow-left {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-0px,-0px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(0px,0px);
+    }
+}
 .card_btn {
     display: inline-block;
     left: 25%;

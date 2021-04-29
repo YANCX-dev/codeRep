@@ -1,5 +1,10 @@
 <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/templates/header.php" ?>
 <?php include $_SERVER["DOCUMENT_ROOT"]."/templates/background.php"?>
+<div class="arrow-left">
+    <span><a href="/index.php"></a></span>
+    <span><a href="/index.php"></a></span>
+    <span><a href="/index.php"></a></span>
+</div>
 <div class="card-openbox">
     <section id="slider_bl">
         <div class="wrapper1">
