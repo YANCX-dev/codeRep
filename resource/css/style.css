@@ -152,10 +152,10 @@ html{
     display: flex;
     max-width: 1515px;;
     min-height: 630px;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 auto;
+    gap: 20px 5px;
 }
 
 .card {
