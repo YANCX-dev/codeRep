@@ -8,15 +8,11 @@ if ($_SESSION["auth"] == false) {
     if (isset($_POST["flat_id"])) {
         $_SESSION['flat_id'] = $_POST["flat_id"];
     }
-    var_dump($_SESSION);
     if (isset($_POST['submit_form'])) {
         $fullname = $_POST["user-fullname"];
         $userphone = $_POST["user-phone"];
         $useremail = $_POST["user-email"];
         $suggestions = $_POST["user-suggest"];
-        echo "*************";
-        var_dump($_POST);
-        echo "--------------";
         if(isset($_SESSION['flat_id'])){
             $send = $sendRequest->sendRequest($_SESSION['flat_id'], $fullname, $userphone, $useremail,$suggestions);
             header("Location:./routes/  ");

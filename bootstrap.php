@@ -6,6 +6,7 @@ use App\config\Connect;
 use App\models\Auth;
 use App\models\InsertCard;
 use App\models\RequestForm;
+use App\models\insertFromForm;
 
 include $_SERVER["DOCUMENT_ROOT"] . "/config/config.php";
 include $_SERVER["DOCUMENT_ROOT"] . "/config/Connect.php";
@@ -21,8 +22,10 @@ $dataAuth = new Auth($pdo);
 $dataCard = new InsertCard($pdo);
 $form = new RequestForm($pdo);
 $sendRequest = new RequestForm($pdo);
-
+$flatInfo = $dataCard->getFlatInfo();
+$Districts = $dataCard->getDist();
 $flats = $dataCard->getFlats();
+
 
 
 

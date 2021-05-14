@@ -13,56 +13,23 @@ class InsertCard
         $this->pdo = $pdo;
     }
 
-    public function insertCard($district, $street, $house, $house_type, $elevator, $floor_number, $number_flat, $price, $flat_descr, $image, $flatEl, $flatSquare)
+    public function insertCard($houseId,$descrip,$apartNumber,$price,$square,$flatEl,$images)
     {
-
-        $newDist = $this->pdo->prepare("INSERT INTO district (district_name) value (:district)");
-
-        $newDist->execute([
-            ":district" => $district,
-        ]);
-        $distId = $this->pdo->lastInsertId();
-
-        $newStreet = $this->pdo->prepare("INSERT INTO street (district_id,street_name) values (:district_id,:street)");
-
-        $newStreet->execute([
-            ":district_id" => $distId,
-            ":street" => $street,
-        ]);
-        $streetId = $this->pdo->lastInsertId();
-
-        $insertType = $this->pdo->prepare("INSERT INTO house_type (floor, elevator,type) values (:floor,:elevator,:type)");
-
-        $insertType->execute([
-            ":floor" => $floor_number,
-            ":elevator" => $elevator,
-            ":type" => $house_type,
-        ]);
-        $type_id = $this->pdo->lastInsertId();
-
-        $newHouse = $this->pdo->prepare("INSERT INTO house (street_id,house_number,type_id) values (:street_id,:house,:type_id)");
-
-        $newHouse->execute([
-            ":street_id" => $streetId,
-            ":house" => $house,
-            ":type_id" => $type_id,
-        ]);
-        $houseId = $this->pdo->lastInsertId();
 
 
         $flatInf = $this->pdo->prepare("INSERT INTO flat
-    (house_id,descr,apartment_number,price,square) values (:house_id,:descr,:apartment_number,:price,:square)");
+        (house_id,descr,apartment_number,price,square) values (:house_id,:descr,:apartment_number,:price,:square)");
 
         $flatInf->execute([
             ":house_id" => $houseId,
-            ":descr" => $flat_descr,
-            ":apartment_number" => $number_flat,
+            ":descr" => $descrip,
+            ":apartment_number" => $apartNumber,
             ":price" => $price,
-            ":square" => $flatSquare,
+            ":square" => $square,
         ]);
 
         $flatId = $this->pdo->lastInsertId();
-        foreach ($flatEl as $i){
+        foreach ($flatEl as $i) {
             $flatStructure = $this->pdo->prepare("INSERT INTO flat_structure
             (flat_id,element_name) values (:flat_id,:element_name)");
 
@@ -73,12 +40,11 @@ class InsertCard
         }
 
 
-
-        foreach ($image as $i) {
+        foreach ($images as $image) {
             $insertImage = $this->pdo->prepare("INSERT INTO images(image_name,flat_id) values (:image,:flat_id) ");
 
             $insertImage->execute([
-                "image" => $i,
+                "image" => $image,
                 "flat_id" => $flatId,
             ]);
         }
@@ -142,12 +108,85 @@ class InsertCard
         $flatElement = $this->pdo->prepare("SELECT * FROM flat_structure WHERE flat_id=:id");
 
         $flatElement->execute([
-            ":id"=>$flat_id
+            ":id" => $flat_id
         ]);
 
         return $flatElement->fetchAll();
 
     }
+
+    public function getFlatInfo()
+    {
+        $stmt = $this->pdo->query("SELECT
+        d.id as dist_id,d.district_name,s.street_name,s.id as str_id,ht.type,h.house_number,h.id as house_id
+        FROM district d INNER JOIN street s on d.id = s.district_id
+        INNER JOIN house h on s.id = h.street_id INNER JOIN
+        house_type ht on h.type_id = ht.id");
+
+        return $stmt->fetchAll();
+
+    }
+    public function getDist(){
+        $stmt = $this->pdo->query("SELECT * FROM district");
+
+        return $stmt->fetchAll();
+    }
+    public function getStreet(){
+        $stmt = $this->pdo->query("SELECT * FROM street");
+
+
+        return $stmt->fetchAll();
+    }
+    public function insertDist($distName){
+        $stmt = $this->pdo->prepare("INSERT INTO district (district_name) values (:district_name)");
+
+        $stmt->execute([
+           "district_name"=>$distName,
+        ]);
+    }
+        public function insertStreet($distId,$streetName){
+        $stmt = $this->pdo->prepare("INSERT INTO street (street_name, district_id) values (:street_name,:district_id)");
+
+        $stmt->execute([
+            "street_name"=>$streetName,
+            "district_id"=>$distId,
+        ]);
+    }
+    public function insertHouseNum($streetId,$houseNum,$typeId,$floor,$elevator){
+        $stmt = $this->pdo->prepare("INSERT INTO house(street_id, house_number,type_id,floor,elevator) values (:street_id,:house_number,:type_id,:floor,:elevator)");
+
+        $stmt->execute([
+           "street_id"=>$streetId,
+           "house_number"=>$houseNum,
+            "type_id"=>$typeId,
+            "floor"=>$floor,
+            "elevator"=>$elevator
+        ]);
+    }
+    public function insertTypeInfo($type){
+        $stmt = $this->pdo->prepare("INSERT INTO
+        house_type(type) values (:type)");
+
+        $stmt->execute([
+            "type"=>$type,
+        ]);
+    }
+    public function getTypes(){
+        $stmt = $this->pdo->query("SELECT * FROM house_type");
+
+        return $stmt->fetchAll();
+
+    }
+    public function getHousesNum($streetId){
+        $stmt = $this->pdo->prepare("SELECT * FROM house WHERE street_id=:id");
+
+        $stmt->execute([
+            "id"=>$streetId,
+        ]);
+
+        return $stmt->fetchAll();
+    }
+
 
 
 //    public function getImage($id){

@@ -51,13 +51,6 @@ class Auth
 
     }
 
-    public function find($login)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE login=:login");
-        $stmt->execute([
-            "login" => $login,
-        ]);
-    }
     public function admin($login){
         $stmt = $this->pdo->query("SELECT * FROM users WHERE role =1");
 

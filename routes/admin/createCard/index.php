@@ -1,19 +1,12 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/bootstrap.php";
-//$flatEl=[
-//    "Livingroom"=>"Зал",
-//    "Bedroom"=>"Спальная комната",
-//    "Kitchen"=>"Кухня",
-//    "Bathroom"=>"Ванная комната",
-//    "Loggia"=>"Лоджия",
-//    "Balcony"=>"Балкон",
-//];
+
 $validFileTypes = ['image/png', 'image/jpeg'];
 $errors = '';
 $maxSize = 2400000;
 $imageNames = [];
 $uploadDir = $_SERVER["DOCUMENT_ROOT"] . "/resource/img/";
-//$file = $_FILES["loadImg"];
+
 
 if ($_SESSION["auth"] == false) {
 
@@ -50,13 +43,13 @@ else {
         if($filecount < 4){
         $errors = "Ошибка загрузки файлов!Минимальное количество файлов - 4!";
          }
-        else{
-//            $dataCard->insertCard($_POST["district"], $_POST["street"], $_POST["house"],
-//                $_POST["house_type"], $_POST["elevator"], $_POST["floor_number"],
-//                $_POST["number_flat"], $_POST["flat_price"], $_POST["flat_descr"], $imageNames, $_POST["flat_structure"], $_POST["flat_square"]);
-            header("Location:/");
+        elseif ($filecount > 4){
+            $errors="Ошибка загрузки файлов!Максимально количество файлов - 4!";
         }
-
+        else{
+            $dataCard->insertCard($_POST["house"],$_POST["flat_descr"],$_POST["number_flat"],$_POST["flat_price"],$_POST["flat_square"],$_POST["flat_structure"],$imageNames);
+//            header("Location:/");
+        }
 
     }
 }
